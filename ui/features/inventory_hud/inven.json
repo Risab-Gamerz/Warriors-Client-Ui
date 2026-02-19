@@ -1,0 +1,86 @@
+//Code Made By RisabGamerz Only .Don't think that it is your code  bcs it is the easiest way to add inventory grid ©
+
+{
+  "namespace": "inven",
+  
+  "inventory_hud": {
+    "type": "stack_panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [-5, 5],
+    "size": [153, 52],
+    "controls": [
+      {
+        "hud_panel": {
+          "type": "panel",
+          "clips_children": true,
+          "controls": [
+            {
+              "inven_grid": {
+                "type": "grid",
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "grid_dimensions": [9, 4],
+                "grid_item_template": "inven.grid",
+                "collection_name": "hotbar_items",
+                "offset":[0,-17]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "item": {
+    "type": "panel",
+    "size": [13, 13],
+    "$item_collection_name": "hotbar_items",
+    "$durability_bar_required": true,
+    "$stack_count_required": true,
+    "layer": 1,
+    "controls": [
+      {
+        "stack@common.stack_count_label": {
+          "layer": 2,
+          "ignored": "false"
+        }
+      },
+      {
+        "item@common.item_renderer": {
+          "layer": 1,
+          "size": [13, 13]
+        }
+      },
+      {
+        "durability@common.durability_bar": {
+          "layer": 3,
+          "ignored": "false"
+        }
+      }
+    ]
+  },
+    "grid": {
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [16, 16],
+    "controls": [
+      {
+        "slots": {
+          "type": "image",
+          "texture": "ui/features/inventory_hud/inventory/hud",
+          "size": ["100% - 1px", "100% - 1px"]
+        }
+      },
+            {
+        "item@inven.item": {}
+      }
+    ],
+    "bindings": [
+      {
+        "binding_collection_name": "hotbar_items",
+        "binding_type": "collection_details"
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "namespace": "technobladeQuickContainer_button",
+  "dropAll_icon@technobladeQuickContainer_template.technobladeQuickContainer_icontemplate": {
+    "$texture": "drop"
+  },
+  "drag_icon@technobladeQuickContainer_template.technobladeQuickContainer_icontemplate": {
+    "$texture": "drag"
+  },
+  "auto_place_icon@technobladeQuickContainer_template.technobladeQuickContainer_icontemplate": {
+    "$texture": "auto_place"
+  },
+  "default_icon@technobladeQuickContainer_template.technobladeQuickContainer_icontemplate": {
+    "$texture": "default",
+    "$icon_color": "",
+    "$icon_size": ["110%", "110%"]
+  },
+  "destroy_icon@technobladeQuickContainer_template.technobladeQuickContainer_icontemplate": {
+    "$texture": "destroy"
+  },
+  "quick_container": {
+    "type": "stack_panel",
+    "size": [20, "default"],
+    "$size": [20, 20],
+    "controls": [
+      {
+        "destroy_mode@technobladeQuickContainer_template.technobladeQuickContainer_toggletemplate": {
+          "$button_content": "technobladeQuickContainer_button.destroy_icon",
+          "$toggle_group_forced_index": 4,
+          "$toggle_view_binding_name": "destroy_toggle",
+          "ignored": "$ignore_destroy_mode",
+          "size": "$size"
+        }
+      },
+      {
+        "technoblade": {
+          "type": "panel",
+          "size": [20, 1]
+        }
+      },
+      {
+        "drag_mode@technobladeQuickContainer_template.technobladeQuickContainer_toggletemplate": {
+          "$button_content": "technobladeQuickContainer_button.drag_icon",
+          "$toggle_group_forced_index": 3,
+          "$toggle_view_binding_name": "drag_toggle",
+          "size": "$size"
+        }
+      },
+      {
+        "never": {
+          "type": "panel",
+          "size": [20, 1]
+        }
+      },
+      {
+        "dropAll_mode@technobladeQuickContainer_template.technobladeQuickContainer_toggletemplate": {
+          "$button_content": "technobladeQuickContainer_button.dropAll_icon",
+          "$toggle_group_forced_index": 2,
+          "$toggle_view_binding_name": "dropAll_toggle",
+          "size": "$size"
+        }
+      },
+      {
+        "dies": {
+          "type": "panel",
+          "size": [20, 1]
+        }
+      },
+      {
+        "auto_place_mode@technobladeQuickContainer_template.technobladeQuickContainer_toggletemplate": {
+          "$button_content": "technobladeQuickContainer_button.auto_place_icon",
+          "$toggle_group_forced_index": 1,
+          "$toggle_view_binding_name": "auto_place_toggle",
+          "size": "$size"
+        }
+      },
+      {
+        "blade": {
+          "type": "panel",
+          "size": [20, 3]
+        }
+      },
+      {
+        "default_mode@technobladeQuickContainer_template.technobladeQuickContainer_toggletemplate": {
+          "$button_content": "technobladeQuickContainer_button.default_icon",
+          "$toggle_default_state": true,
+          "$toggle_group_forced_index": 0,
+          "$toggle_view_binding_name": "default_toggle",
+          "size": "$size"
+        }
+      }
+    ]
+  }
+}

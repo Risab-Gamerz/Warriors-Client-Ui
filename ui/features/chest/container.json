@@ -1,0 +1,23 @@
+{
+  "namespace": "technobladeQuickContainer_container",
+  "autoPlaceContainer@technobladeQuickContainer_template.technobladeQuickContainer_slottemplate": {
+    "$button_ref": "technobladeQuickContainer_buttonMapping.auto_place_new",
+    "$toggle": "auto_place_toggle"
+  },
+  "destroyContainer@technobladeQuickContainer_template.technobladeQuickContainer_slottemplate": {
+    "$button_ref": "technobladeQuickContainer_buttonMapping.destroy_new",
+    "$toggle": "destroy_toggle"
+  },
+  "dropAllContainer@technobladeQuickContainer_template.technobladeQuickContainer_slottemplate": {
+    "$button_ref": "technobladeQuickContainer_buttonMapping.dropAll_new",
+    "$toggle": "dropAll_toggle"
+  },
+  "dragContainer@technobladeQuickContainer_template.technobladeQuickContainer_slottemplate": {
+    "$button_ref": "technobladeQuickContainer_buttonMapping.drag_new",
+    "$toggle": "drag_toggle"
+  },
+  "defaultContainer@technobladeQuickContainer_template.technobladeQuickContainer_slottemplate": {
+    "$button_ref": "common.container_slot_button_prototype",
+    "$toggle": "default_toggle"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "small_chest_panel/root_panel": {
+    "$top_variant": "chest.small_chest_panel_top_half",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "1@technobladeQuickContainer_base.content": {}
+        }
+      }
+    ]
+  },
+  "large_chest_panel/root_panel": {
+    "$top_variant": "chest.large_chest_panel_top_half",
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "1@technobladeQuickContainer_base.content": {}
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "namespace": "hud",
+  "hud_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "inven@inven.inventory_hud": {}
+          }
+        ]
+      }
+                {
+
+              "array_name": "controls",
+
+              "operation": "insert_front",
+              "value": {
+                  "gamma": {
+                      "type": "image",
+                      "texture": "textures/gui/gamma",
+                      "size": [ 1000, 1000 ],
+                      "layer": 1000
+                  }
+              }
+          }
+    ]
+  },
+
+  "Inventory_Hud": {
+    "type": "panel",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "size": ["50%", "100%"],
+    "controls": [
+      {
+        "label": {
+          "type": "label",
+          "size": ["default", 10],
+          "max_size": ["100%", "100%"],
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "bindings": [
+            {
+              "binding_name": "#inventory_hud"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "clock_view": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [20, 20],
+    "property_bag": {
+      "#item_id_aux": 22740992
+    }
+  },
+
+  "compass_view": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [20, 20],
+    "property_bag": {
+      "#item_id_aux": 22609920
+    }
+  },
+
+  "recovery_compass_view": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [20, 20],
+    "property_bag": {
+      "#item_id_aux": 44761088
+    }
+  },
+
+  "clock_compass": {
+    "type": "stack_panel",
+    "size": [20, 72],
+    "offset": [2, 2],
+    "orientation": "vertical",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      {
+        "compass_view@hud.compass_view": {}
+      },
+      {
+        "recovery_compass_view@hud.recovery_compass_view": {}
+      },
+      {
+        "clock_view@hud.clock_view": {}
+      }
+    ]
+  },
+
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "clock_compass@hud.clock_compass": {}
+          }
+        ]
+      }
+    ]
+  }
+}

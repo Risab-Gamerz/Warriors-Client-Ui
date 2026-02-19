@@ -1,0 +1,20 @@
+{
+    "ui_defs": [
+    "ui/features/background.uidata",
+    "ui/features/background1.uidata",
+    "ui/features/inventory_hud/inven.json",
+	"ui/hud_screen.json",
+	"warrior/src/animations/fade_animation.json",
+    "warrior/src/animations/menu_animation.json",
+    "warrior/src/components/button.json",
+    "warrior/src/components/screen.json",
+    "warrior/src/play_screen.json",
+    "warrior/src/start_screen.json",
+    "warrior/src/world_templates_screen.json",
+    "ui/features/chest/mapping.json",
+    "ui/features/chest/container.json",
+    "ui/features/chest/template.json",
+    "ui/features/chest/quick_container.json",
+    "ui/features/chest/button.json"
+    ]
+  }

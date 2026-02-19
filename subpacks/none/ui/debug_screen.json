@@ -1,0 +1,50 @@
+{
+  "namespace": "debug_screen",
+
+  //--------------------------------------------------------------------------------
+  // Special Crosshair Image Render
+  //--------------------------------------------------------------------------------
+
+  "special_render": {
+    "type": "image",
+    "offset": [0, 0],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "texture": "textures/debug/cross_hair",
+    "size": [20, 20],
+    "layer": -2
+  },
+
+  //--------------------------------------------------------------------------------
+  // Debug Global Screen Panel
+  //--------------------------------------------------------------------------------
+
+  "debug_global_screen_panel": {
+    "type": "panel",
+    "clips_children": false,
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { "special_render@debug_screen.special_render": { } }
+    ]
+  },
+
+  //--------------------------------------------------------------------------------
+  // Debug Screen
+  //--------------------------------------------------------------------------------
+
+  "debug_screen@common.base_screen": {
+    "send_telemetry": false,
+    "screen_not_flushable": true,
+    "render_game_behind": true,
+    "is_showing_menu": false,
+    "low_frequency_rendering": true,
+    "is_modal": true,
+    "should_steal_mouse": false,
+    "render_only_when_topmost": false,
+    "screen_draws_last": true,
+    "always_accepts_input": true,
+    "$screen_content": "debug_screen.debug_global_screen_panel",
+    "$screen_animations": [],
+    "$use_loading_bars": false
+  }
+}

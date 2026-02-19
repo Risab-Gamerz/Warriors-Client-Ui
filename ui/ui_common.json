@@ -1,0 +1,49 @@
+{
+  "container_item": {
+    "modifications": [
+      {
+        "operation": "replace",
+        "control_name": "item_button_ref",
+        "value": [
+          {
+            "ref@$ref": {}
+          }
+        ]
+      }
+    ],
+    "$use_inv_mode|default": false,
+    "$mode_ref|default": "quick_loot_common.inv_mode_button_ref",
+    "variables": [
+      {
+        "requires": "(not $use_inv_mode)",
+        "$ref": "$button_ref"
+      },
+      {
+        "requires": "$use_inv_mode",
+        "$ref": "$mode_ref"
+      }
+    ]
+  },
+  "dirt_background": {
+    "ignored": "($is_holographic and not $is_living_room_mode)",
+    "type": "image",
+    "texture": "textures/ui/screen_background",
+    "layer": 1,
+    "tiled": false
+  },
+  "portal_background": {
+    "ignored": "$is_holographic",
+    "type": "image",
+    "texture": "textures/ui/screen_background",
+    "layer": 1,
+    "tiled": false
+  }, 
+    "screen_background": {
+      "type": "image",
+       "texture": "textures/ui/screen_background",
+       "layer": -10,
+       "ignored": "$is_holographic",
+       "$screen_background_alpha|default": 0.0,
+       "alpha": "$screen_background_alpha" 
+  }
+}

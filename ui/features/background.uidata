@@ -1,0 +1,20 @@
+{
+  "namespace": "background",
+  "bg": {
+    "type": "image",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [ "100%", "100%" ],
+    "uv": "",
+    "controls": [
+    {
+        "bg1": {
+          "type": "image",
+          "fill": true,
+          "texture": "textures/ui/BACKGROUND/BG",
+          "uv_size": [ "100%", "100%" ]
+    }
+      }
+    ]
+  }
+}

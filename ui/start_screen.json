@@ -1,0 +1,12 @@
+{
+  "start_screen": {
+  "$screen_bg_content": "background.bg",
+    "$screen_animations": [
+      "@wui_menu_animation.open_push",
+      "@wui_menu_animation.open_pop",
+      "@wui_menu_animation.close_push",
+      "@wui_menu_animation.close_pop"
+    ],
+    "$screen_content": "wui_start.start_screen_content"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "namespace": "technobladeQuickContainer_template",
+  "technobladeQuickContainer_toggletemplate@common_toggles.light_image_toggle": {
+    "$radio_toggle_group": true,
+    "$toggle_group_default_selected": 0,
+    "$toggle_name": "technoblade"
+  },
+  "technobladeQuickContainer_icontemplate": {
+    "type": "image",
+    "$icon_color|default": "$text_color",
+    "$icon_size|default": [16, 16],
+    "size": "$icon_size",
+    "color": "$icon_color",
+    "texture": "('textures/' + 'debug/' + $texture)"
+  },
+  "technobladeQuickContainer_slottemplate": {
+    "type": "panel",
+    "$button_ref_2": "$button_ref",
+    "$top_variant|default": "",
+    "$middle_variant|default": "common.inventory_panel_bottom_half",
+    "$bottom_variant|default": "common.hotbar_grid_template",
+    "controls": [
+      {
+        "top@$top_variant": {
+          "layer": 6
+        }
+      },
+      {
+        "middle@$middle_variant": {
+          "layer": 6
+        }
+      },
+      {
+        "bottom@$bottom_variant": {
+          "layer": 6
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "namespace": "hud",
+
+  "clock_view": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [16, 16],
+    "property_bag": {
+      "#item_id_aux": 22740992
+    }
+  },
+
+  "compass_view": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [16, 16],
+    "property_bag": {
+      "#item_id_aux": 22609920
+    }
+  },
+
+  "recovery_compass_view": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [16, 16],
+    "property_bag": {
+      "#item_id_aux": 44630016
+    }
+  },
+
+  "clock_compass": {
+    "type": "stack_panel",
+    "size": [16, 48],
+    "offset": [4, 4],
+    "orientation": "vertical",
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      {
+        "clock_view@hud.clock_view": {}
+      },
+      {
+        "compass_view@hud.compass_view": {}
+      },
+      {
+        "recovery_compass_view@hud.recovery_compass_view": {}
+      }
+    ]
+  },
+
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "clock_compass@hud.clock_compass": {}
+          },
+                    {
+            "inven@inven.inventory_hud": {}
+          }
+        ]
+      }
+    ]
+  }
+}

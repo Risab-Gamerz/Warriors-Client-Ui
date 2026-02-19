@@ -1,0 +1,38 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "§e~By RisabGamerz , Theme- Technoblade",
+        "name": "§l§cWarriors' Client",
+        "uuid": "dfeafd82-6069-4866-a023-a999bb69c7c2",
+        "version": [3,
+            0,
+            5],
+        "min_engine_version": [1,
+            16,
+            0]
+    },
+    "modules": [{
+        "description": "The Best Client",
+        "type": "resources",
+        "uuid": "cc250b2c-05b7-44b2-a237-8618101b2668",
+        "version": [3,
+            0,
+            5]
+    }],
+    "subpacks":[{
+        "folder_name":"night_vision",
+        "name":"§4Night Vision Only",
+        "memory_tier":0
+    },
+        {
+
+            "folder_name":"crosshair_off",
+            "name":"Always crosshair off",
+            "memory_tier":0
+        },
+        {
+            "folder_name":"none",
+            "name":"None",
+            "memory_tier":0
+        }]
+}

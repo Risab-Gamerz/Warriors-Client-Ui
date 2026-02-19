@@ -1,0 +1,35 @@
+{
+  "namespace": "technobladeQuickContainer_base",
+  "content": {
+    "type": "panel",
+    "size": "$root_size",
+    "$root_size|default": ["100%", "100%"],
+    "$ignore_destroy_mode|default": true,
+    "$qcPos|default": "left_middle",
+    "$qcOf|default": [-28, 0],
+    "controls": [
+      {
+        "1@technobladeQuickContainer_button.quick_container": {
+          "anchor_from": "$qcPos",
+          "anchor_to": "$qcPos",
+          "offset": "$qcOf"
+        }
+      },
+      {
+        "2@technobladeQuickContainer_container.autoPlaceContainer": {}
+      },
+      {
+        "3@technobladeQuickContainer_container.destroyContainer": {}
+      },
+      {
+        "4@technobladeQuickContainer_container.dragContainer": {}
+      },
+      {
+        "5@technobladeQuickContainer_container.dropAllContainer": {}
+      },
+      {
+        "6@technobladeQuickContainer_container.defaultContainer": {}
+      }
+    ]
+  }
+}
